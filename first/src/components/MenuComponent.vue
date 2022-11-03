@@ -6,6 +6,10 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/cinema">Cinema</router-link></li>
         <li><router-link to="/music">Music</router-link></li>
+        <li><router-link to="/lifecicle">Life Cicle</router-link></li>
+        <li><router-link to="/form">Form</router-link></li>
+        <li><router-link to="/properties">Properties</router-link></li>
+        <li><router-link to="/filters">Filters</router-link></li>
       </ul>
     </nav>
   </div>

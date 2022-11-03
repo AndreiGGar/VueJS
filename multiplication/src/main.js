@@ -4,11 +4,8 @@ import router from './Router.js'
 
 const app = createApp(App)
 app.config.globalProperties.$filters = {
-  mayus(data) {
-    return data.toUpperCase();
-  },
-  getDoubleNumber(data) {
-    return data * 2;
+  getMultiplication(number, multiplier) {
+    return number * multiplier;
   }
 }
 app.use(router).mount('#app')
