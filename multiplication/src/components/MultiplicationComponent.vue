@@ -7,6 +7,9 @@
       <li v-for="number in getNumbers" :key="number">
         {{ "Number: " + parseInt(numberBox) + " * " + (number) + " = " + $filters.getMultiplication(parseInt(numberBox), number) }}
       </li>
+      <!-- <li v-for="n in 10" :key="n">
+        {{ $filters.getMultiplication(parseInt(numberBox), n) }}
+      </li> -->
     </div>
   </div>
 </template>

@@ -1,0 +1,18 @@
+.crimson {
+  background-color: crimson;
+  color: white;
+}
+
+.purple {
+  background-color: purple;
+  color: yellow;
+}
+
+img {
+  width: 150px;
+  height: 250px;
+}
+
+div#comics {
+  display: inline-block;
+}

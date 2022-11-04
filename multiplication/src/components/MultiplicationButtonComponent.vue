@@ -2,7 +2,7 @@
   <div class="hello">
     <h3>Multiplication</h3>
     <input type="number" id="numberBox" v-model="numberBox"><br /><br />
-    <button v-if="numberBox" @click="doMultiplication(numberBox)">Get Blue Elements</button><br/><br/>
+    <button v-if="numberBox" @click="doMultiplication(numberBox)">Get Multiplication</button><br/><br/>
     <div style="display: flex; justify-content: center;">
       <table>
         <thead>

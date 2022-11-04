@@ -4,6 +4,7 @@
     <nav>
       <ul>
         <li><router-link to="/">Home</router-link></li>
+        <li><router-link to="/multiplicationbtn">Multiplication by Btn</router-link></li>
         <li><router-link to="/multiplication">Multiplication</router-link></li>
       </ul>
     </nav>
