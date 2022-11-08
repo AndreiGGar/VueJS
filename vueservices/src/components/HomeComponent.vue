@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Services from './ServicesComponent.vue';
+import Services from "../../services/Services.js";
 const service = new Services();
 
 export default {

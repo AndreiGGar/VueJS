@@ -16,18 +16,18 @@
       </div>
     </form><br />
     <div v-if="employer" class="row">
-      <span><b>{{ "Id: "}}</b> {{employer.idEmpleado }}</span><br />
-      <span><b>{{ "Surname: "}}</b> {{employer.apellido }}</span><br />
-      <span><b>{{ "Job: "}}</b> {{employer.oficio }}</span><br />
-      <span><b>{{ "Salary: "}}</b> {{employer.salario }}</span><br />
-      <span><b>{{ "Department: "}}</b> {{employer.departamento }}</span><br />
+      <span><b>{{ "Id: " }}</b> {{ employer.idEmpleado }}</span><br />
+      <span><b>{{ "Surname: " }}</b> {{ employer.apellido }}</span><br />
+      <span><b>{{ "Job: " }}</b> {{ employer.oficio }}</span><br />
+      <span><b>{{ "Salary: " }}</b> {{ employer.salario }}</span><br />
+      <span><b>{{ "Department: " }}</b> {{ employer.departamento }}</span><br />
     </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios';
-import Global from '../Global';
+import EmployersService from "../../services/EmployersServices.js";
+const service = new EmployersService();
 
 export default {
   name: "CarsComponent",
@@ -39,23 +39,16 @@ export default {
     }
   },
   methods: {
-    loadEmployers() {
-      var request = "api/Empleados";
-      var url = Global.urlEmployers + request;
-      axios.get(url).then(response => {
-        this.employers = response.data;
-      })
-    },
     searchEmployers() {
-      var request = "api/Empleados/" + this.idEmployer;
-      var url = Global.urlEmployers + request;
-      axios.get(url).then(response => {
-        this.employer = response.data;
-      })
+      service.searchEmployer(this.idEmployer).then(result => {
+        this.employer = result;
+      });
     }
   },
   mounted() {
-    this.loadEmployers();
+    service.getEmployers().then(result => {
+      this.employers = result;
+    });
   }
 }
 </script>

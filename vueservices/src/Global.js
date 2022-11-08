@@ -1,5 +1,5 @@
 var Global = {
-  urlApi: "https://apicochespaco.azurewebsites.net/",
+  urlCars: "https://apicochespaco.azurewebsites.net/",
   urlEmployers: "https://apiempleadosfullstack.azurewebsites.net/"
 }
 

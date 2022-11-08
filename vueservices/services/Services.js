@@ -1,5 +1,5 @@
 export default class Services {
   getTry(name) {
-    return this[name];
+    return "Welcome to the services, " + name;
   }
 }

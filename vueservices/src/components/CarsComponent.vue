@@ -17,8 +17,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-import Global from '../Global';
+import CarsService from "../../services/CarsService.js";
+const service = new CarsService();
 
 export default {
   name: "CarsComponent",
@@ -29,11 +29,7 @@ export default {
   },
   methods: {
     loadCars() {
-      var request = "webresources/coches";
-      var url = Global.urlApi + request;
-      axios.get(url).then(response => {
-        this.cars = response.data;
-      })
+      this.cars = service.getCars();
     }
     // getCars() {
     //   fetch("http://localhost:3000/cars")
