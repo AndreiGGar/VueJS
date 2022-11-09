@@ -11,8 +11,8 @@
             <th>Number</th>
             <th>Name</th>
             <th>Location</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <!-- <th>Edit</th>
+            <th>Delete</th> -->
           </tr>
         </thead>
         <tbody>
@@ -20,8 +20,8 @@
             <td>{{ department.numero }}</td>
             <td>{{ department.nombre }}</td>
             <td>{{ department.localidad }}</td>
-            <td><router-link class="btn btn-warning" :to="'/departments/edit/' + department.numero">Edit</router-link></td>
-            <td><router-link class="btn btn-danger" :to="'/departments/delete/' + department.numero">Delete</router-link></td>
+            <!-- <td><router-link class="btn btn-warning" :to="'/departments/edit/' + department.numero">Edit</router-link></td>
+            <td><router-link class="btn btn-danger" :to="'/departments/delete/' + department.numero">Delete</router-link></td> -->
           </tr>
         </tbody>
       </table>

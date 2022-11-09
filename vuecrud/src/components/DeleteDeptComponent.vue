@@ -32,7 +32,7 @@ export default {
     deleteDepartment() {
       this.number = parseInt(this.number);
       service.deleteDepartment(this.number).then(() => {
-        window.location.href = '/departments';
+        this.$router.push('/departments');
       });
     }
   },

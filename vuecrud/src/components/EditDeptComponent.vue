@@ -34,7 +34,7 @@ export default {
     updateDepartment() {
       this.department.numero = parseInt(this.department.numero);
       service.updateDepartment(this.department).then(() => {
-        window.location.href = '/departments/details/' + this.department.numero;
+        this.$router.push('/departments/details/' + this.department.numero);
       });
     }
   },
