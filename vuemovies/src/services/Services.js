@@ -4,7 +4,7 @@ import Global from "../Global";
 export default class Services {
   getMovies() {
     return new Promise(function (resolve) {
-      var request = "api/Series";
+      var request = "api/Peliculas";
       var url = Global.urlApi + request;
       var series = [];
 
@@ -16,13 +16,37 @@ export default class Services {
   }
   getMoviesById(id) {
     return new Promise(function (resolve) {
-      var request = "api/Series/" + id;
+      var request = "api/Peliculas/" + id;
       var url = Global.urlApi + request;
       var series = {};
 
       axios.get(url).then((response) => {
         series = response.data;
         resolve(series);
+      });
+    });
+  }
+  getMoviesByNationality(id) {
+    return new Promise(function (resolve) {
+      var request = "api/Peliculas/PeliculasNacionalidad/" + id;
+      var url = Global.urlApi + request;
+      var movies = [];
+
+      axios.get(url).then((response) => {
+        movies = response.data;
+        resolve(movies);
+      });
+    });
+  }
+  getMoviesByGenre(id) {
+    return new Promise(function (resolve) {
+      var request = "api/Peliculas/PeliculasGenero/" + parseInt(id);
+      var url = Global.urlApi + request;
+      var movies = [];
+
+      axios.get(url).then((response) => {
+        movies = response.data;
+        resolve(movies);
       });
     });
   }

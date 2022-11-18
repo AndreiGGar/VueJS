@@ -22,7 +22,7 @@
               <a class="btn btn-danger" target="_blank" v-bind:href=movie.enlaceVideo>Enlace</a>
             </td>
             <td>
-              <DetailsMoviesComponent :idDetails=movie.idPelicula></DetailsMoviesComponent>
+              <router-link class="btn btn-warning" :to="'/characters/update'">Details</router-link>
             </td>
           </tr>
         </tbody>
@@ -35,13 +35,9 @@
 import Services from "../services/Services.js";
 const service = new Services();
 import Swal from "sweetalert2";
-import { DetailsMoviesComponent } from "./DetailsMoviesComponent.vue";
 
 export default {
-  name: 'MoviesComponent',
-  components: {
-    DetailsMoviesComponent
-  },
+  name: 'DetailsMoviesComponent',
   data() {
     return {
       movies: [],
@@ -49,7 +45,7 @@ export default {
       statusNationality: false,
     };
   },
-  props: ['idDelete'],
+  props: ['idDetails'],
   mounted() {
     if (this.$route.params.param === 'genres') {
       this.getMoviesByGenre();
